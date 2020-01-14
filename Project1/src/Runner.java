@@ -11,7 +11,7 @@ public class Runner
 			{
      
 				intro();
-				sortStudents.sortByLastName();
+				
 				sortStudents.sortByGpa();
 				sortStudents.sortByPeriod();
 				ChangeStudentGradeSchedule.changeGrades();
