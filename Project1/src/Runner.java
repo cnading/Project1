@@ -1,6 +1,7 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Runner
@@ -11,9 +12,7 @@ public class Runner
 			{
        
 				intro();
-				sortStudents.sortByLastName();
-				sortStudents.sortByGpa();
-				sortStudents.sortByPeriod();
+				// Lauren will implement calling her classes + methods later
 				ChangeStudentGradeSchedule.changeGrades();
 
 			}
