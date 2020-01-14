@@ -1,4 +1,4 @@
-sortBranch
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -10,21 +10,21 @@ public class Runner
 		public static void main(String[] args)
 			{
        
-				into();
-        sortStudents.sortByLastName();
+				intro();
+				sortStudents.sortByLastName();
 				sortStudents.sortByGpa();
 				sortStudents.sortByPeriod();
-         changeStudentSchedule();
 				ChangeStudentGradeSchedule.changeGrades();
 
 			}
 
-		private static void into()
+		public static void intro()
 			{
 				System.out.println("What would you like to do?");
 				System.out.println("1) Add or delete a student \n2) Change student grades or schedule\n3) Sort Students");
 				choice= userInput.nextInt();
 				if (choice==1){
+					
 					AddOrDel.intro();
 				}
 //				else if (choice==1){
@@ -36,5 +36,7 @@ public class Runner
 				
 				
 			}
+
+
 
 	}
