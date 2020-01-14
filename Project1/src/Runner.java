@@ -1,21 +1,37 @@
+sortBranch
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Runner
 	{
-
-		public static void main(String[] args) throws FileNotFoundException
+		static Scanner userInput = new Scanner(System.in);
+		static int choice = 0;
+		public static void main(String[] args)
 			{
-				// TODO Auto-generated method stub
-				
-				
-			//	Scanner file = new Scanner(new File ("studentInfo.txt"));
-		//		System.out.println(file);
-				sortStudents.sortByLastName();
+				into();
+        sortStudents.sortByLastName();
 				sortStudents.sortByGpa();
 				sortStudents.sortByPeriod();
 
+			}
+
+		private static void into()
+			{
+				System.out.println("What would you like to do?");
+				System.out.println("1) Add or delete a student \n2) Change student grades or schedule\n3) Sort Students");
+				choice= userInput.nextInt();
+				if (choice==1){
+					AddOrDel.intro();
+				}
+//				else if (choice==1){
+//					AddOrDel.intro();
+//				}
+//				else if (choice==2){
+//					AddOrDel.intro();
+//				}
+				
+				
 			}
 
 	}
