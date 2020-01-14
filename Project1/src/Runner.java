@@ -9,10 +9,13 @@ public class Runner
 		static int choice = 0;
 		public static void main(String[] args)
 			{
+       
 				into();
         sortStudents.sortByLastName();
 				sortStudents.sortByGpa();
 				sortStudents.sortByPeriod();
+         changeStudentSchedule();
+				ChangeStudentGradeSchedule.changeGrades();
 
 			}
 
