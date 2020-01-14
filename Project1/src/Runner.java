@@ -9,7 +9,7 @@ public class Runner
 		static int choice = 0;
 		public static void main(String[] args)
 			{
-       
+     
 				intro();
 				sortStudents.sortByLastName();
 				sortStudents.sortByGpa();

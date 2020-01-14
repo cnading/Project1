@@ -5,6 +5,7 @@ public class ChangeStudentGradeSchedule
 		public static void changeGrades()
 		{
 			System.out.println("Hello Michael");
+			System.out.println("test");
 		}
 		
 		
