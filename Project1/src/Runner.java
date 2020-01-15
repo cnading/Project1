@@ -2,7 +2,7 @@
 import java.io.FileNotFoundException; 
 import java.util.ArrayList;
 import java.util.Scanner; 
-
+import java.util.Collections;
 
 public class Runner
 	{
@@ -11,11 +11,7 @@ public class Runner
 		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
-			
-				 
-				
 				intro();
-				sortStudents.sortByLastName();
 				sortStudents.sortByGpa();
 				sortStudents.sortByPeriod();
 				ChangeStudentGradeSchedule.changeGrades();
