@@ -14,6 +14,7 @@ public class AddOrDel
 		static String tGrade;
 		static double GPA;
 		static Student transfer;
+		static Student temp;
 		static String response;
 		
 		
@@ -66,6 +67,7 @@ public class AddOrDel
 			response= userInput.nextLine();
 			if (response.equals("Yes")|| response.equals("yes") || response.equals("YES")){
 				System.out.println("Student Added");
+				Runner.roster.add(transfer);
 				intro();
 			}
 			else{
@@ -76,6 +78,26 @@ public class AddOrDel
 		
 		public static void removeStudent(){
 			System.out.println("What is the students first name?");
-			
+			userInput.nextLine();
+			fName = userInput.nextLine();
+			for (Student n: Runner.roster){
+				if(fName.equals(n.getFirstName())){
+					Student deletedStudent  = n;
+					System.out.println(deletedStudent.getFirstName());
+					
+				}
+				
+			}
+			System.out.println("Are you sure you want to remove " + temp.getFirstName() + temp.getLastName());
+			userInput.nextLine();
+			response= userInput.nextLine();
+			if (response.equals("Yes")|| response.equals("yes") || response.equals("YES")){
+				System.out.println("Student Removed!");
+				intro();
+			}
+			else{
+				System.out.println("Canceled!");
+				intro();
+			}
 		}
 	}
