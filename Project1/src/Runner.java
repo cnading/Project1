@@ -12,8 +12,8 @@ public class Runner
 		public static void main(String[] args) throws FileNotFoundException
 			{
 				intro();
-				sortStudents.sortByGpa();
-				sortStudents.sortByPeriod();
+//				sortStudents.sortByGpa();
+//				sortStudents.sortByPeriod();
 				ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
 				ChangeStudentGradeSchedule.changeGrades();
 

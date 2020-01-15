@@ -12,8 +12,9 @@ public class AddOrDel
 		static String sGrade;
 		static String tClass;
 		static String tGrade;
-		static int GPA;
+		static double GPA;
 		static Student transfer;
+		static String response;
 		
 		
 		public static void intro()
@@ -54,12 +55,27 @@ public class AddOrDel
 			System.out.println("And what is their grade in " + tClass);
 			tGrade = userInput.nextLine();
 			System.out.println("Lastly, what is their GPA?");
-			GPA= userInput.nextInt();
+			GPA= userInput.nextDouble();
 			transfer = new Student(fName, lName, fClass, fGrade, sClass, sGrade, tClass, tGrade, GPA);
-			
+			System.out.println("Please confirm the following info is correct?\n(YES or NO)");
+			System.out.println(transfer.getFirstName() + " " + transfer.getLastName() + "\n" + transfer.getFirstClass() + ": " + transfer.getFirstClassGrade()
+			 + "\n" + transfer.getSecondClass() + ": " + transfer.getSecondClassGrade()
+			 + "\n" + transfer.getThirdClass() + ": " + transfer.getThirdClassGrade()
+			 + "\nGPA: " + transfer.getGradePointAverage());
+			userInput.nextLine();
+			response= userInput.nextLine();
+			if (response.equals("Yes")|| response.equals("yes") || response.equals("YES")){
+				System.out.println("Student Added");
+				intro();
+			}
+			else{
+				System.out.println("Canceled!");
+				intro();
+			}
 		}
 		
 		public static void removeStudent(){
+			System.out.println("What is the students first name?");
 			
 		}
 	}
