@@ -15,7 +15,7 @@ public class Runner
 				sortStudents.sortByGpa();
 				sortStudents.sortByPeriod();
 				ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
-				ChangeStudentGradeSchedule.changeGrades();
+	
 
 			}
 
