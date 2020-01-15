@@ -8,12 +8,12 @@ public class Runner
 	{
 		static Scanner userInput = new Scanner(System.in);
 		static int choice = 0;
+		
 		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
 				intro();
-				sortStudents.sortByGpa();
-				sortStudents.sortByPeriod();
+			
 				ChangeStudentGradeSchedule.changeGrades();
 
 			}
@@ -33,6 +33,12 @@ public class Runner
 //				else if (choice==2){
 //					AddOrDel.intro();
 //				}
+				
+			 if (choice == 3)
+					 {
+						 sortStudentsMenu.intro();
+						 
+					 }
 				
 				
 			}
