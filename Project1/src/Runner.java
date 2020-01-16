@@ -13,11 +13,12 @@ public class Runner
 		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
-			
+	
+				fileReader.readStudentFile();
 				intro();
 //				sortStudents.sortByGpa();
 //				sortStudents.sortByPeriod();
-				ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+				//ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
 	
 
 			}
@@ -31,24 +32,30 @@ public class Runner
 					
 					AddOrDel.intro();
 				}
-//				else if (choice==1){
-//					AddOrDel.intro();
-//				}
-//				else if (choice==2){
-//					AddOrDel.intro();
-//				}
+				else if (choice==1){
+					AddOrDel.intro();
+				}
+				else if (choice==2){
+					ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+				}
+				else if(choice==3)
+					{ 
+						sortStudentsMenu.intro();
+					}
+				
 				
 				
 			}
 		
 		public static void printRoster()
 		{ 
-			for(Student t: Runner.roster)
-				{
-					System.out.println(t.getFirstName());
-				}
+			for(Student s: roster)
+			{ 
+				System.out.println(s.getFirstName() + s.getLastName() + s.getFirstClass() + s.getFirstClassGrade() + s.getSecondClass() + s.getSecondClassGrade() + s.getThirdClass() + s.getThirdClassGrade() + 0.0);
+			}
 		}
-
+		
+	
 
 
 	}

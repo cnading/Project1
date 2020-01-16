@@ -59,15 +59,11 @@ public class ChangeStudentGradeSchedule
 			
 			System.out.println("Okay, here are all of the students: ");
 			
-			for(Student s: Runner.roster)
-				{ 
-					System.out.println(s.getFirstClass());
-				}
+			Runner.printRoster(); 
 			
+			//Scanner userInputString = new Scanner(System.in); 
 			
-			Scanner userInputString = new Scanner(System.in); 
-			
-			String chosenStudentFirstName = userInputString.nextLine(); 
+			//String chosenStudentFirstName = userInputString.nextLine(); 
 			
 			
 			
