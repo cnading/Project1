@@ -40,7 +40,9 @@ public class ChangeStudentGradeSchedule
 		
 		public static void changeGrades()
 		{
-		
+	System.out.println("Okay, here are all of the students: ");
+			
+			Runner.printRoster(); 
 	
 		}
 	
