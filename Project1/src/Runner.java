@@ -4,17 +4,20 @@ import java.util.ArrayList;
 import java.util.Scanner; 
 import java.util.Collections;
 
+
+
 public class Runner
-	{
+	{	
 		static Scanner userInput = new Scanner(System.in);
 		static int choice = 0;
-		
 		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
 				intro();
-			
-				ChangeStudentGradeSchedule.changeGrades();
+//				sortStudents.sortByGpa();
+//				sortStudents.sortByPeriod();
+				ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+	
 
 			}
 
@@ -34,15 +37,10 @@ public class Runner
 //					AddOrDel.intro();
 //				}
 				
-			 if (choice == 3)
-					 {
-						 sortStudentsMenu.intro();
-						 
-					 }
-				
 				
 			}
 
 
 
 	}
+
