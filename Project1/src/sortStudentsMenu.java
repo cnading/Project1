@@ -21,16 +21,16 @@ public class sortStudentsMenu
 			 
 			 if (sortChoice == 1)
 				 {
-				Collections.sort(fileReader.roster, new sortStudentNames());
+				Collections.sort(Runner.roster, new sortStudentNames());
 				
 				 }
 			 else if (sortChoice == 2)
 				 {
-					 Collections.sort(fileReader.roster, new sortStudentGpa());
+					 Collections.sort(Runner.roster, new sortStudentGpa());
 				 }
 			 else if (sortChoice == 3)
 				 {
-					 Collections.sort(fileReader.roster, new sortStudentsPeriod());
+					 Collections.sort(Runner.roster, new sortStudentsPeriod());
 				 }
 			 else
 				 {

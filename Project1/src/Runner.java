@@ -14,10 +14,11 @@ public class Runner
 		public static void main(String[] args) throws FileNotFoundException
 			{
 			
+				fileReader.readStudentFile();
 				intro();
 //				sortStudents.sortByGpa();
 //				sortStudents.sortByPeriod();
-				ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+	//			ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
 	
 
 			}
@@ -31,12 +32,14 @@ public class Runner
 					
 					AddOrDel.intro();
 				}
-//				else if (choice==1){
-//					AddOrDel.intro();
-//				}
-//				else if (choice==2){
-//					AddOrDel.intro();
-//				}
+			
+				else if (choice==2){
+					ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+				}
+				else if (choice == 3)
+					{
+						sortStudentsMenu.intro();
+					}
 				
 				
 			}
