@@ -22,20 +22,37 @@ public class sortStudentsMenu
 			 if (sortChoice == 1)
 				 {
 				Collections.sort(Runner.roster, new sortStudentNames());
+
+				 Runner.printRoster();
+
 				
 				 }
 			 else if (sortChoice == 2)
 				 {
 					 Collections.sort(Runner.roster, new sortStudentGpa());
+
 				 }
 			 else if (sortChoice == 3)
 				 {
 					 Collections.sort(Runner.roster, new sortStudentsPeriod());
+
+					 Runner.printRoster();
+				 }
+			 else if (sortChoice == 3)
+				 {
+					Collections.sort(Runner.roster, new sortStudentsPeriod());
+					Runner.printRoster(); 
+
 				 }
 			 else
 				 {
 					 Runner.intro();
+					 Runner.printRoster(); 
 				 }
+			 
+			
+			 
+			
 		}
 
 	}
