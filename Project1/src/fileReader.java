@@ -38,11 +38,7 @@ public class fileReader
 					Runner.roster.add((new Student(firstName, lastName, firstClass, firstClassGrade, secondClass, secondClassGrade, thirdClass, thirdClassGrade, 0.0))); 
 				}
 			
-			for(Student s: Runner.roster)
-				{ 
-					System.out.println(s.getFirstName()); 
-				}
-		
+			
 		}
 		
 	}

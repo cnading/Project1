@@ -13,6 +13,7 @@ public class Runner
 		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
+			
 				intro();
 //				sortStudents.sortByGpa();
 //				sortStudents.sortByPeriod();
@@ -39,6 +40,14 @@ public class Runner
 				
 				
 			}
+		
+		public static void printRoster()
+		{ 
+			for(Student t: Runner.roster)
+				{
+					System.out.println(t.getFirstName());
+				}
+		}
 
 
 

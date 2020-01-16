@@ -40,7 +40,7 @@ public class ChangeStudentGradeSchedule
 		
 		public static void changeGrades()
 		{
-			System.out.println("");
+		
 	
 		}
 	
@@ -51,98 +51,26 @@ public class ChangeStudentGradeSchedule
 		
 		
 		
+
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		//Clancy: line 106
+//Clancy: line 70
 		public static void switchClasses()
 		{
+			
+			System.out.println("Okay, here are all of the students: ");
+			
+			for(Student s: Runner.roster)
+				{ 
+					System.out.println(s.getFirstClass());
+				}
+			
+			
+			Scanner userInputString = new Scanner(System.in); 
+			
+			String chosenStudentFirstName = userInputString.nextLine(); 
+			
+			
+			
 			
 		}
 		
