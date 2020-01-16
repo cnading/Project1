@@ -80,12 +80,7 @@ public class AddOrDel
 			System.out.println("What is the students first name?");
 			userInput.nextLine();
 			fName = userInput.nextLine();
-			for (Student n: Runner.roster){
-				if(fName.equals(n.getFirstName())){
-					Student deletedStudent  = n;
-					System.out.println(deletedStudent.getFirstName());
-					
-				}
+			for (int i=0; i<Runner.roster.size(); i++){
 				
 			}
 			System.out.println("Are you sure you want to remove " + temp.getFirstName() + temp.getLastName());
