@@ -37,8 +37,10 @@ public class fileReader
 					
 					Runner.roster.add((new Student(firstName, lastName, firstClass, firstClassGrade, secondClass, secondClassGrade, thirdClass, thirdClassGrade, 0.0))); 
 				}
+		
+					}
 			
-			
+
 		}
 		
-	}
+	
