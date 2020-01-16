@@ -13,12 +13,10 @@ public class Runner
 		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
-	
+
 				fileReader.readStudentFile();
 				intro();
-//				sortStudents.sortByGpa();
-//				sortStudents.sortByPeriod();
-				//ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+
 	
 
 			}
@@ -32,6 +30,16 @@ public class Runner
 					
 					AddOrDel.intro();
 				}
+
+			
+				else if (choice==2){
+					ChangeStudentGradeSchedule.IntroForGradeAndScheduleChange();
+				}
+				else if (choice == 3)
+					{
+						sortStudentsMenu.intro();
+					}
+
 				else if (choice==1){
 					AddOrDel.intro();
 				}
@@ -43,6 +51,7 @@ public class Runner
 						sortStudentsMenu.intro();
 					}
 				
+
 				
 				
 			}
