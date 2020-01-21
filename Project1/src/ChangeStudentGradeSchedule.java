@@ -131,18 +131,50 @@ public class ChangeStudentGradeSchedule
 
 			}
 
-//Clancy: line 70
+
 		public static void switchClasses()
 			{
+
+				String temp; 
+				String temp1;
+				String temp2;
+				String[] schedule1;
+				String[] schedule2;
+				
+				Scanner userInput = new Scanner(System.in);
 
 				System.out.println("Okay, here are all of the students: ");
 
 				Runner.printRoster();
+				//String temp = [2];
+				//myData[2] = myData[5];
+				//myData[5] = temp;
+				System.out.println("Please enter the first name of a student.");
+				
+				String firstName = userInput.next();
 
-				// Scanner userInputString = new Scanner(System.in);
+				System.out.println("Please enter the last name of the student.");
+				
+				String lastName = userInput.next();
+				
+				String fullName = firstName + " " + lastName; 
 
-				// String chosenStudentFirstName = userInputString.nextLine();
+				//for (int i = 0; i < Runner.roster.size(); i ++)
+				for (Student i: Runner.roster)
+					{
+						if((i.getFirstName() + " " + i.getLastName()).equals(fullName))
+							{ 
+							System.out.println("Here is the student: " + .getFirstName() + " " + s.getLastName() + " " + s.getFirstClass() + " " + s.getFirstClassGrade() + " " + s.getSecondClass() + " " + s.getSecondClassGrade() + " " + s.getThirdClass() + " " + s.getThirdClassGrade() + " " + 0.0);
+								
+				//String first = firstClas;
+				
+				String[] classes  = new String[3];
+							
+				classes[0] = Runner.roster.get(i).getFirstClass();
+				classes[1] = Runner.roster.get(i).getSecondClass();
+				classes[2] = Runner.roster.get(i).getThirdClass();
 
+					}
 			}
-
+			}
 	}
