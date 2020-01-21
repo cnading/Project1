@@ -18,40 +18,72 @@ public class sortStudentsMenu
 			 		+ "\n4) return to main menu");
 			 
 			 sortChoice = userInput.nextInt();
-			 
 			 if (sortChoice == 1)
 				 {
-				Collections.sort(Runner.roster, new sortStudentNames());
-
-				 Runner.printRoster();
-
-				
+					 sortNames();
 				 }
 			 else if (sortChoice == 2)
 				 {
-					 Collections.sort(Runner.roster, new sortStudentGpa());
-
+					 sortGpa();
 				 }
 			 else if (sortChoice == 3)
 				 {
+					 sortPeriod();
+				 }
+			 else
+				 {
+					 Runner.intro();
+				 }
+				 
+		}
+		
+		public static void sortNames()
+		{
+			 
+			
+				Collections.sort(Runner.roster, new sortStudentNames());
+
+				 Runner.printRoster();
+				 
+				 System.out.println();
+				 intro();
+
+				
+				 
+		}
+		
+		public static void sortGpa()
+		{
+			
+			  
+					 Collections.sort(Runner.roster, new sortStudentGpa());
+
+					 System.out.println();
+					 intro();
+		}
+		
+		public static void sortPeriod()
+		{
+			
 					 Collections.sort(Runner.roster, new sortStudentsPeriod());
 
 					 Runner.printRoster();
-				 }
-			 else if (sortChoice == 3)
-				 {
+				 
+			
 					Collections.sort(Runner.roster, new sortStudentsPeriod());
 					Runner.printRoster(); 
 
-				 }
-			         System.out.println();
-					 Runner.intro();
-					 Runner.printRoster(); 
+					System.out.println();
+					intro();
+		}
+			        
+					
+					
 				 
 			 
 			
 			 
 			
-		}
+		
 
 	}
