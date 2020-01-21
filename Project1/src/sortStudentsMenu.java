@@ -44,11 +44,10 @@ public class sortStudentsMenu
 					Runner.printRoster(); 
 
 				 }
-			 else
-				 {
+			         System.out.println();
 					 Runner.intro();
 					 Runner.printRoster(); 
-				 }
+				 
 			 
 			
 			 
