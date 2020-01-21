@@ -40,9 +40,20 @@ public class ChangeStudentGradeSchedule
 		
 		public static void changeGrades()
 		{
+	Scanner userInput = new Scanner(System.in); 		
+	
 	System.out.println("Okay, here are all of the students: ");
 			
 			Runner.printRoster(); 
+
+	System.out.println("Please enter the first name of a student to change their grades");
+	
+	String chosenStudentName = userInput.next(); 
+	
+	for(Student s: Runner.roster)
+		{ 
+			
+		}
 	
 		}
 	
