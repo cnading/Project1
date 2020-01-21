@@ -78,21 +78,26 @@ public class AddOrDel
 		
 		public static void removeStudent(){
 			System.out.println("What is the students first name?");
-			userInput.nextLine();
 			fName = userInput.nextLine();
 			for (int i=0; i<Runner.roster.size(); i++){
+				{
+					if (fName.equals(Runner.roster.get(i).getFirstName())){
+						System.out.println("Are you sure you want to remove " + Runner.roster.get(i).getFirstName() + Runner.roster.get(i).getLastName());
+						userInput.nextLine();
+						response= userInput.nextLine();
+						if (response.equals("Yes")|| response.equals("yes") || response.equals("YES")){
+							System.out.println("Student Removed!");
+							
+						}
+						
+					}
+					else{
+						System.out.println("Student not found capitalize the first letter of their first name.");
+						removeStudent();
+					}
+				}
 				
 			}
-			System.out.println("Are you sure you want to remove " + temp.getFirstName() + temp.getLastName());
-			userInput.nextLine();
-			response= userInput.nextLine();
-			if (response.equals("Yes")|| response.equals("yes") || response.equals("YES")){
-				System.out.println("Student Removed!");
-				intro();
-			}
-			else{
-				System.out.println("Canceled!");
-				intro();
-			}
+			
 		}
 	}
