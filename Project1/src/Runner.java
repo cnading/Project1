@@ -17,8 +17,6 @@ public class Runner
 				fileReader.readStudentFile();
 				intro();
 
-	
-
 			}
 
 		public static void intro()
