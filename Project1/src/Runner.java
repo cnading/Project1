@@ -60,7 +60,7 @@ public class Runner
 		{ 
 			for(Student s: roster)
 			{ 
-				System.out.println(s.getFirstName() + s.getLastName() + s.getFirstClass() + s.getFirstClassGrade() + s.getSecondClass() + s.getSecondClassGrade() + s.getThirdClass() + s.getThirdClassGrade() + 0.0);
+				System.out.println(s.getFirstName() + " " + s.getLastName() + " " + s.getFirstClass() + " " + s.getFirstClassGrade() + " " + s.getSecondClass() + " " + s.getSecondClassGrade() + " " + s.getThirdClass() + " " + s.getThirdClassGrade() + " " + 0.0);
 			}
 		}
 		
