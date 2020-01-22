@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class ChangeStudentGradeSchedule
 	{
 		static ArrayList<Student> roster = new ArrayList<Student>();
+		
 		public static void IntroForGradeAndScheduleChange()
 			{
 
@@ -144,7 +145,108 @@ public class ChangeStudentGradeSchedule
 
 		public static void switchClasses()
 			{
+				Scanner userInput = new Scanner(System.in); 
+				
+				System.out.println("Okay here is the student roster: ");
 
+				System.out.println();
+				
+				Runner.printRoster(); 
+				
+				System.out.println();
+				
+				System.out.println("Please enter the first name of a student to change their shedule.");
+
+				String firstName = userInput.next();
+
+				System.out.println("Please enter the last name of the student.");
+
+				String lastName = userInput.next();
+
+				String fullName = firstName + " " + lastName;
+				
+				String temp; 
+				
+				for(Student t: Runner.roster)
+					{ 
+						if ((t.getFirstName() + " " + t.getLastName()).equals(fullName))
+							{
+								String studentGPA = Runner.decFor.format(t.getGradePointAverage());
+								System.out.println("Here is the student: " + t.getFirstName() + " " + t.getLastName()
+										+ " " + t.getFirstClass() + " " + t.getFirstClassGrade() + " "
+										+ t.getSecondClass() + " " + t.getSecondClassGrade() + " " + t.getThirdClass()
+										+ " " + t.getThirdClassGrade() + " " + studentGPA);
+								
+								System.out.println();
+
+			
+								
+								System.out.println("Which period would you like to transfer out of? \nPeriod 1: "
+										+ t.getFirstClass() + " " + t.getFirstClassGrade() + "\nPeriod 2: "
+										+ t.getSecondClass() + " " + t.getSecondClassGrade() + "\nPeriod 3: "
+										+ t.getThirdClass() + " " + t.getThirdClassGrade());
+								
+								int transferPeriod = userInput.nextInt(); 
+								
+								System.out.println("Which period would you like to transfer into? \nPeriod 1: "
+										+ t.getFirstClass() + " " + t.getFirstClassGrade() + "\nPeriod 2: "
+										+ t.getSecondClass() + " " + t.getSecondClassGrade() + "\nPeriod 3: "
+										+ t.getThirdClass() + " " + t.getThirdClassGrade());
+								
+								int transferToPeriod = userInput.nextInt(); 
+								
+								System.out.println("Okay you are transferring out of period: " + transferPeriod + ", " + "into period: " + transferToPeriod);
+								
+								if(transferPeriod == 1 && transferToPeriod == 2)
+									{
+										temp = t.getFirstClass(); 
+										t.setFirstClass(t.getSecondClass());
+										t.setSecondClass(temp);
+									}
+								
+								
+								
+								else if(transferPeriod == 2 && transferToPeriod == 3)
+									{ 
+										temp = t.getSecondClass(); 
+										t.setSecondClass(t.getThirdClass());
+										t.setThirdClass(temp);
+										
+									}
+								
+								else if(transferPeriod == 1 && transferToPeriod == 3)
+									{ 
+										temp = t.getFirstClass(); 
+										t.setFirstClass(t.getThirdClass()); 
+										t.setThirdClass(temp);
+									}
+								
+								System.out.println("Here is the updated roster: ");
+								
+								Runner.printRoster(); 
+								
+								System.out.println();
+								
+								Runner.intro();
+									
+								
+								
+								
+								
+								
+								
+
+	
+					}
+					
+				
+				
+				
+				
+				
+				
+				
+				
 				String temp1; 
 				String temp2;
 				String temp3;
@@ -154,6 +256,6 @@ public class ChangeStudentGradeSchedule
 				
 
 			
-			
+					}
 			}
 	}
