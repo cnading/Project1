@@ -55,10 +55,14 @@ public class sortStudentsMenu
 		public static void sortGpa()
 		{
 			
-			  
+			  		gpaCalculator.getGradeAverage();
+			  		
 					 Collections.sort(Runner.roster, new sortStudentGpa());
 
+					 Runner.printRoster(); 
 					 System.out.println();
+					 
+					
 					 intro();
 		}
 		
