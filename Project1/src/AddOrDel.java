@@ -78,6 +78,7 @@ public class AddOrDel
 		
 		public static void removeStudent(){
 			System.out.println("What is the students first name?");
+			userInput.nextLine();
 			fName = userInput.nextLine();
 			for (int i=0; i<Runner.roster.size(); i++){
 				{
