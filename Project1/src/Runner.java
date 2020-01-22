@@ -1,5 +1,6 @@
 
-import java.io.FileNotFoundException; 
+import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner; 
 import java.util.Collections;
@@ -11,10 +12,13 @@ public class Runner
 		static Scanner userInput = new Scanner(System.in);
 		static int choice = 0;
 		static ArrayList<Student> roster = new ArrayList<Student>();
+		static DecimalFormat decFor = new DecimalFormat("0.00");
+		
 		public static void main(String[] args) throws FileNotFoundException
 			{
 
 				fileReader.readStudentFile();
+				gpaCalculator.getGradeAverage();
 				intro();
 
 			}
@@ -58,7 +62,13 @@ public class Runner
 		{ 
 			for(Student s: roster)
 			{ 
-				System.out.println(s.getFirstName() + " " + s.getLastName() + " " + s.getFirstClass() + " " + s.getFirstClassGrade() + " " + s.getSecondClass() + " " + s.getSecondClassGrade() + " " + s.getThirdClass() + " " + s.getThirdClassGrade() + " " + 0.0);
+				String studentGPA = decFor.format(s.getGradePointAverage()); 
+				
+				System.out.println(s.getFirstName() + " " + s.getLastName() + " " 
+						+ s.getFirstClass() + " " + s.getFirstClassGrade() + " " 
+						+ s.getSecondClass() + " " + s.getSecondClassGrade() + " " 
+						+ s.getThirdClass() + " " + s.getThirdClassGrade() + " " 
+						+ studentGPA);
 			}
 		}
 		

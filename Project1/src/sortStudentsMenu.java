@@ -69,8 +69,11 @@ public class sortStudentsMenu
 			Collections.sort(Runner.roster, new sortStudentNames());
 			 Collections.sort(Runner.roster, new sortStudentsPeriod());
 
+
 					 Runner.printRoster();
-				  
+
+				
+
 					System.out.println();
 					intro();
 		}
