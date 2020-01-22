@@ -67,10 +67,6 @@ public class sortStudentsMenu
 			
 					 Collections.sort(Runner.roster, new sortStudentsPeriod());
 
-					 Runner.printRoster();
-				 
-			
-					Collections.sort(Runner.roster, new sortStudentsPeriod());
 					Runner.printRoster(); 
 
 					System.out.println();
