@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,7 +7,7 @@ import java.util.Scanner;
 
 public class ChangeStudentGradeSchedule
 	{
-
+		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void IntroForGradeAndScheduleChange()
 			{
 
@@ -135,46 +136,15 @@ public class ChangeStudentGradeSchedule
 		public static void switchClasses()
 			{
 
-				String temp; 
-				String temp1;
+				String temp1; 
 				String temp2;
+				String temp3;
 				String[] schedule1;
 				String[] schedule2;
 				
-				Scanner userInput = new Scanner(System.in);
-
-				System.out.println("Okay, here are all of the students: ");
-
-				Runner.printRoster();
-				//String temp = [2];
-				//myData[2] = myData[5];
-				//myData[5] = temp;
-				System.out.println("Please enter the first name of a student.");
 				
-				String firstName = userInput.next();
 
-				System.out.println("Please enter the last name of the student.");
-				
-				String lastName = userInput.next();
-				
-				String fullName = firstName + " " + lastName; 
-
-				//for (int i = 0; i < Runner.roster.size(); i ++)
-				for (Student i: Runner.roster)
-					{
-						if((i.getFirstName() + " " + i.getLastName()).equals(fullName))
-							{ 
-							System.out.println("Here is the student: " + .getFirstName() + " " + s.getLastName() + " " + s.getFirstClass() + " " + s.getFirstClassGrade() + " " + s.getSecondClass() + " " + s.getSecondClassGrade() + " " + s.getThirdClass() + " " + s.getThirdClassGrade() + " " + 0.0);
-								
-				//String first = firstClas;
-				
-				String[] classes  = new String[3];
-							
-				classes[0] = Runner.roster.get(i).getFirstClass();
-				classes[1] = Runner.roster.get(i).getSecondClass();
-				classes[2] = Runner.roster.get(i).getThirdClass();
-
-					}
-			}
+			
+			
 			}
 	}
