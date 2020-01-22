@@ -64,10 +64,15 @@ public class sortStudentsMenu
 		
 		public static void sortPeriod()
 		{
-			
-					 Collections.sort(Runner.roster, new sortStudentsPeriod());
+			System.out.println("Which period would you like to see? \n(1)First \n(2)Second \n(3)Third");
+			sortChoice = userInput.nextInt();
+			Collections.sort(Runner.roster, new sortStudentNames());
+			 Collections.sort(Runner.roster, new sortStudentsPeriod());
 
-					Runner.printRoster(); 
+
+					 Runner.printRoster();
+
+				
 
 					System.out.println();
 					intro();
