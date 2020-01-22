@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,7 +7,7 @@ import java.util.Scanner;
 
 public class ChangeStudentGradeSchedule
 	{
-
+		static ArrayList<Student> roster = new ArrayList<Student>();
 		public static void IntroForGradeAndScheduleChange()
 			{
 
@@ -131,18 +132,19 @@ public class ChangeStudentGradeSchedule
 
 			}
 
-//Clancy: line 70
+
 		public static void switchClasses()
 			{
 
-				System.out.println("Okay, here are all of the students: ");
+				String temp1; 
+				String temp2;
+				String temp3;
+				String[] schedule1;
+				String[] schedule2;
+				
+				
 
-				Runner.printRoster();
-
-				// Scanner userInputString = new Scanner(System.in);
-
-				// String chosenStudentFirstName = userInputString.nextLine();
-
+			
+			
 			}
-
 	}
