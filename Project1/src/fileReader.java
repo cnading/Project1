@@ -34,6 +34,8 @@ public class fileReader
 					
 					String thirdClassGrade = currentStudentInformation[7]; 
 					
+				
+					
 					
 					Runner.roster.add((new Student(firstName, lastName, firstClass, firstClassGrade, secondClass, secondClassGrade, thirdClass, thirdClassGrade, 0.0))); 
 				}
